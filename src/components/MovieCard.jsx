@@ -3,11 +3,11 @@ import { Card, Button } from 'antd';
 import { StepBackwardOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, type }) => {
   return (
     <>
       <Button type="primary" className="mb-1">
-        <Link to="/movies">
+        <Link to={type ? '/movies-favorites' : '/movies'}>
           <StepBackwardOutlined />
           Atrás
         </Link>

@@ -23,7 +23,7 @@ const Template = ({ children }) => {
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" className="header-menu-template">
           <Menu.Item
-            key="3"
+            key="1"
             icon={<FundProjectionScreenOutlined />}
             className={
               location.pathname === '/movies' ? 'ant-menu-item-selected' : ''
@@ -32,7 +32,19 @@ const Template = ({ children }) => {
             <Link to="/movies">Películas</Link>
           </Menu.Item>
 
-          <Menu.Item key="4" icon={<LogoutOutlined />} onClick={() => logout()}>
+          <Menu.Item
+            key="2"
+            icon={<FundProjectionScreenOutlined />}
+            className={
+              location.pathname === '/movies-favorites'
+                ? 'ant-menu-item-selected'
+                : ''
+            }
+          >
+            <Link to="/movies-favorites">Películas favoritas</Link>
+          </Menu.Item>
+
+          <Menu.Item key="3" icon={<LogoutOutlined />} onClick={() => logout()}>
             Salir
           </Menu.Item>
         </Menu>

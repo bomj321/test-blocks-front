@@ -49,7 +49,7 @@ const MovieDetail = () => {
               md={{ span: 8, offset: 8 }}
               lg={{ span: 7, offset: 9 }}
             >
-              <MovieCard movie={movie} />
+              <MovieCard movie={movie} type={params.type} />
             </Col>
           </Row>
         </Content>

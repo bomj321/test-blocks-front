@@ -16,7 +16,7 @@ import { parseJwt } from '../libs/utils';
 
 const { Column } = Table;
 
-const TableMovie = () => {
+const TableFavoritesMovies = () => {
   const [loading, setLoading] = useState(false);
   const [totalItems, setTotalItems] = useState();
   const [page, setPage] = useState(1);
@@ -26,7 +26,7 @@ const TableMovie = () => {
 
   const getMovies = (pageNumber = 1, pageSizeNumber = 20) => {
     setLoading(true);
-    MovieService.getMovies(pageNumber, pageSizeNumber)
+    MovieService.getMoviesLikedByMe(pageNumber, pageSizeNumber)
       .then((response) => {
         setDataSource([]);
         const rows = [];
@@ -106,7 +106,7 @@ const TableMovie = () => {
                 return (
                   <>
                     <Tooltip title="Ver detalle" className="pointer">
-                      <Link to={`/movies/${data._id}`}>
+                      <Link to={`/movies/${data._id}/favorites`}>
                         <EyeOutlined className="mr-1" />
                       </Link>
                     </Tooltip>
@@ -142,4 +142,4 @@ const TableMovie = () => {
   );
 };
 
-export default TableMovie;
+export default TableFavoritesMovies;
