@@ -18,7 +18,7 @@ const Login = ({ setToken }) => {
             xs={{ span: 14, offset: 5 }}
             sm={{ span: 14, offset: 4 }}
             md={{ span: 8, offset: 7 }}
-            lg={{ span: 8, offset: 7 }}
+            lg={{ span: 8, offset: 8 }}
           >
             <FormLogin setToken={setToken} />
           </Col>

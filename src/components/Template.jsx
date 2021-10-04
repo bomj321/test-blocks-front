@@ -63,7 +63,7 @@ const Template = ({ children }) => {
             {children}
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            Test Vertebra @2021 Created by José ortega
+            Test Blocks @2021 Created by José ortega
           </Footer>
         </Layout>
       </Layout>
