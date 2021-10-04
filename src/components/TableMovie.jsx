@@ -57,8 +57,8 @@ const TableMovie = () => {
           toastr.success('Ya no te gusta la película');
         }
         getMovies(page, pageSize);
-
         setLoading(false);
+        toastr.clear();
       })
       .catch(() => {
         toastr.error('Hubo un error al actualizar la película.');
